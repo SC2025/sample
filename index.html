@@ -44,7 +44,7 @@ font-weight: 1000;
 #section_B{
 border: 2PX solid rgb(255, 0, 0);
 border: 2PX solid;
-opacity: 0;
+opacity: 1;
 padding: 10px;
 
 gap: 50px;
@@ -54,7 +54,7 @@ font-weight: 1000;
 }
 #section_C{
 border: 2PX solid rgb(255, 0, 0);
-opacity: 0;
+opacity: 1;
 padding: 10px;
 
 gap: 10px;
@@ -75,7 +75,7 @@ padding: 5px;
 
 }
 
-#marquee
+
 
 option{
 padding: 5px;
@@ -188,6 +188,28 @@ align-items: center;
 justify-content: center;
 display: flex;
 }
+
+/* .paymentall{
+margin: 2%;
+display: flex;
+border: 3px solid;
+align-items: center;
+justify-content: center;
+text-align: center;
+
+} */
+.gp{
+        border-radius: 50%;
+        gap: 10px;
+        border: 20px rgb(11, 0, 0);
+height: 5%;
+padding: 25px;
+}
+.gpbtn{
+        background-color: rgb(0, 0, 0);
+    border-radius: 80%;
+        margin: 20px;
+}
 </style>
 </head>
 <body id="body">
@@ -299,11 +321,22 @@ display: flex;
 </div>
 
 </p>
-<div >
-       <a id="google_pay1" href=""><button><img  src="gp.png" alt="" ></button></a> 
-       <a id="google_pay2" href=""><button><img  src="pp.png" alt="" ></button></a> 
-       <a id="google_pay3" href=""><button><img  src="ptm.png" alt="" ></button></a> 
 
+
+        <marquee
+        behavior="alternate"
+        id="marquee"
+        scrollamount = "4">
+        
+        <div class="paymentall">
+                <a id="google_pay1" href=""><button class="gpbtn"><img  class="gp" src="gp.png" alt="" ></button></a> 
+                <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
+                <a id="google_pay3" href=""><button class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a> 
+        </div>
+        </marquee>
+
+
+  
        <!-- <img id="qr"  src="qr.jpg"  alt=""> -->
 </div>
 
