@@ -6,726 +6,199 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 <style>
-*{
-margin: 0;
-padding: 0;
-
-}
-/* #a1{
-opacity: 1;
-} */
-#get-bill{
-font-weight: 1000;
-}
 
 
-
-
-
-#section_A{
-border: 2PX solid rgb(252, 45, 30);
-opacity: 1;
-padding: 10px;
-
-/* background-color: rgb(228, 162, 81); */
-/* background-color: rgb(215, 235, 177); */
-gap: 10px;
-
-font-size: 20px;
-font-weight: 1000;
-}
-#section_B{
-border: 2PX solid rgb(255, 0, 0);
-border: 2PX solid;
-opacity: 0;
-padding: 10px;
-
-gap: 50px;
-
-font-size: 20px;
-font-weight: 1000;
-}
-#section_C{
-border: 2PX solid rgb(255, 0, 0);
-opacity: 0;
-padding: 10px;
-
-gap: 10px;
-
-font-size: 10px;
-font-weight: 1000;
-}
-#section_D{
-border: 2PX solid red;
-opacity: 0;
-padding: 10px;
-gap: 10px;
-font-size: 20px;
-font-weight: 1000;
-}
-#name,#address{
-padding: 5px;
-
-}
-
-#marquee
-
-option{
-padding: 5px;
-height: 20px;
-width: 20px;
-}
-
-.button{
-height: 40px;
-width: 35vh;
-background-color:#5783db;
-color: rgb(255, 255, 255);
-border: 3px solid rgb(0, 0, 0);
-padding: 2px;
-font-weight: 500;
-margin-top: 3px;
-font: bold;
-border-radius: 100PX;
-
-}
-
-.STAR{
-color: rgb(255, 255, 255);
-}
-.big_font{
-font-size: 15px;
-background-color: rgb(6, 255, 255);
-border: 2px solid;
-padding: 4px;
-border: 2px solid black;
-color: rgb(0, 0, 0);
-}
-#qr_info_all_data{
-border: 2px solid black;
-padding: 5px;
-}
-#qr_info_2{
-background-color: rgb(235, 84, 84);
-border: 1px solid black;
-padding: 4px;
-color: rgb(255, 255, 255);
-font-weight: 900;
-}
-#transaction_id{
-height: 20px;
-padding: 5px;
-margin-left: 5px;
-}
-#colour_change{
-color: rgb(0, 0, 0);
-font-weight: 1000;
-}
-.sec_d_element{
+.div_all_product{
 display: flex;
-font-size: 10px;
-}
-#submit_btn{
-height: 40px;
-width: 35vh;
-background-color: rgb(0, 0, 0);
-color: rgb(255, 255, 255);
-border: 3px solid rgb(194, 147, 119);
-padding: 2px;
-font-weight: 1000;
-margin-top: 3px;
-font: bold;
-}
-
-/* .small{
-height: 0px;
-width: 0px;
-font-size: 0px;
-background-color: brown;
-display: flex;
-}
-.imgsmall{
-height: 1px;
-width: 1px;
-background-color: brown;
-display: flex;
-} */
-BODY{
-    background-color: rgb(223, 229, 234);
-}
-#section_A>P{
-font-size: 15PX;
-}
-#addres_add,#product-quntity,#product-name{
-height: 30PX;
-background-color: rgb(220, 236, 217);
-margin-top: 2PX;
-margin-bottom: 2PX;
-border: 1 px solid black;
-font: bold;
-font-weight: 1000;
-color: rgb(255, 0, 0);
-}
-#product-name>option{
-border: 1px solid black;
-}
-.main_hedding{
-display: flex;
-border: 0.1px solid black;
-
-align-items: center;
-justify-content: center;
-text-align: center;
-font-size: 20px;
-}
-.name{
-background-color: rgb(190, 220, 210);
-border: 2px solid black;
-font-size: 20px;
-font-weight: 1000;
+height: fit-content;
+padding: 10px;
 margin: 10px;
-padding: 5px;
+font-weight: 1000;
+color: rgb(0, 0, 0);
+/* background-color: rgb(236, 178, 178); */
+}
+
+
+.btn{
+height: 50%;
+width: 100%;
+margin: 10px;
+padding: 10px;
+border-radius:40%;
+/* background-color: rgb(0, 0, 0); */
+color: rgb(255, 255, 255);
+font-weight: 1000;
+}
+
+
+#main_heding{
+    padding: 10px;
+color: rgb(255, 255, 255);
+font-size: 30px;
+display: flex;
 align-items: center;
 justify-content: center;
-display: flex;
+font-weight: 1000;
 }
-.paymentall{
-width: 100;
+#all_product_heding{
 display: flex;
+margin-left: 6%;
+padding: 5px;
+font-size: 30px;
+/* background:#a0d2eb;  */
+color: rgb(255, 255, 255);
+}
+.marquee_para{
+/* background-color: rgb(47, 255, 255); */
+color: antiquewhite;
 border: 1px solid;
-}
-/* .gp{
-        border-radius: 50%;
-       
-        border: 20px rgb(255, 18, 18);
-height: 70px;
-padding: 5px;
-text-align: center;
-justify-content: center;
-align-items: center;
+padding: 9px;
+border-radius: 20px;
+width: fit-content;
 display: flex;
-} */
-.gpbtn{
-        border-radius: 100%;
-        width: fit-content;
-        background-color: black;
-        padding: 3px;
-        text-align: center;
-justify-content: center;
-align-items: center;
-margin: 10px;
+font-weight: bold;
+
 }
-.google_pay3{height: 2px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+#marquee_flex_line{
+display: flex;
+gap: 10px;
 }
-.gp{
-        height: 50px;
-        display: flex;
-        border-radius: 100%;
-        width: fit-content;
-        background-color: black;
-        padding: 1px;
-        text-align: center;
-justify-content: center;
-align-items: center;
+
+.first_sms1,.first_sms2,.first_sms3,.first_sms4,.first_sms5,.first_sms6,.first_sms7,.first_sms8{
+  color: antiquewhite;
+border: 1px solid;
+padding: 9px;
+border-radius: 20px;
+width: fit-content;
+display: flex;
+font-weight: bold;
 }
+.img-logo{
+    
+    height: 50px;
+    margin: 5px;
+    border-radius: 50%;
+    padding: 3px;
+   /* background-color: black; */
+}
+#a{
+   
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+}
+#a{
+    background-repeat: no-repeat;
+    background-image: url("data:image/jpeg;base64,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");
+    background-size: cover;
+}
+
 </style>
 </head>
-<body id="body">
+<body id="a">
+    <div>
 
+<!--    
+<div id="main_heding"><img class="img-logo" src="logo.png" alt="">सह्याद्री कलेक्शन <img class="img-logo" src="logo.png" alt=""></div>
+<marquee behavior="" direction="">
+<div id="marquee_flex_line">
 
-<body>
-
-<div >
-<div  id="section_A">
-  
-        <div class="name"> सह्याद्री  कलेक्शन</div>
-    
-<div class="main_hedding" id="section_A_h">-Personal Details-</div>
-<p>Name:- <input id="name" type="text"></p>
-
-<p  >Address:- <select   name=""  id="addres_add">
-<option value="select city">select city</option>
-<option value="rahimatpur">Rahimatpur</option>
-<option value="boriv">Boriv</option>
-<option value="Naharwadi">Naharwadi</option>
-</select>
-
-<p >Full Address:- <input id="address" type="text"></p></p>
-<div>
-<button  id="hide_procede_tp_payment_btn_1"  class="button" onclick="section_A()">Submit personal information</button>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-
-
-
-
-<div id="section_B" >
-<div class="main_hedding" id="section_B_h"></div>
-<select  name="" id="product-name" onchange="alert(`${document.getElementById(`name`).value} you select  ${this.options[this.selectedIndex].text} is conform to proceed `)">
-<option  value="00" >Select Product</option>
-
-<option value="9">Steel hangers</option>
-<option value="7">plastic hangers</option>
-<option value="3">HARD Plastic Cloth Clips</option>
-<option value="15">Napkins <BR> Size 35 CM * 21 CM</option>
-<option value="18">Napkins <BR> Size  40 CM * 25 CM</option>
-
-</select>
-
-<select name="" id="product-quntity">
-<option value="6">6  pieces</option>
-<option value="10">10  pieces</option>
-<option value="12">12  pieces</option>
-</select>
-
-<button  class="button" id="hide_procede_tp_payment_btn" onclick="section_B()">Procede To Payment</button>
-
-</div>
-
-<div  id="section_C">
-<div id="qr_info_all_data">
-<p id="qr_info" ></p>
-<p id="qr_info_2" ></p>
-</div>
-
-</p>
-<div >
-<!-- <img id="qr"  src="qr.jpg"  alt=""> -->
-<div class="paymentall">
-    <marquee
-    behavior="alternate"
-    id="marquee"
-    scrollamount = "7">
-
-    <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
-    <a id="google_pay1" href=""><button class="gpbtn"><img  class="gp" src="gp.png" alt="" ></button></a> 
-    <a id="google_pay3" href=""><button class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a> 
-   
-   
-    </marquee>
-    
-
-</div>
-</div>
-
-<p  id="colour_change" class="big_font">Enter UPI transactiion id last 4 digit<input  id="transaction_id" value="" type="text"></p>
-<BUtton class="button"  onclick="section_C()">preview And Submit Payment data </BUtton>
-</div>
-
-
-
-
-
-<div id="section_D">
-<p class="main_hedding" id="section_D_h"></p>
-<BR>
-<div class="sec_d_element"> <p>name of custemer :- </p><P id="name_of_custemer"></P></div>
-<BR>
-<div class="sec_d_element"> <p>Villege Name :- </p><P id="addres_add_se"></P></div>
-<br>
-<div class="sec_d_element"> <p>Address NEAR BY :- </p><P id="Address_NEAR_BY"></P></div>
-<BR>
-<div class="sec_d_element"> <p>product name :- </p><P id="product_name"></P></div>
-<BR>
-<div class="sec_d_element"> <p>get discount :- </p><P id="get_discount"></P></div>
-<BR>
-<div class="sec_d_element"> <p>product quantity :- </p><P id="product_quantity"></P></div>
-<BR>
-<div class="sec_d_element"> <p>one product_prise :- </p><P id="one_product_prise"></P></div>
-<BR>
-<div class="sec_d_element"> <p>total :- </p><P id="total_product_prize"></P></div>
-<BR>
-<div class="sec_d_element"><p>Order Date :- <p id="date"></p></p></div>
-<BR>
-<div class="sec_d_element"> <p>UPI transaction ID :- </p><P id="transaction_ID"></P></div>
-<BR>
-
-
-
-
-
-
-
-
-
-
-
-<marquee
-behavior="alternate"
-id="marquee"
-scrollamount = "4">
-<button onclick="gotowhatsapp()"   class="button"  id="get-bill" >Click submit @ whatsapp</button>
-
+<p class="marquee_para">The big discount offer each product 20 % discount ;order NOW.</p>
+<p class="first_sms1"></p>
+<p class="marquee_para">The big discount offer each product 20 % discount ;order NOW.</p>
+<p class="first_sms2"></p>
+<p class="marquee_para">The big discount offer each product 20 % discount ;order NOW.</p>
+<p class="first_sms3"></p>
+<p class="marquee_para">The big discount offer each product 20 % discount ;order NOW.</p>
+<p class="first_sms4"></p>
+<p class="marquee_para">The big discount offer each product 20 % discount ;order NOW.</p>
+<p class="first_sms5"></p>
+<p class="marquee_para">The big discount offer each product 20 % discount ;order NOW.</p>
+<p class="first_sms6"></p>
+<p class="marquee_para">The big discount offer each product 20 % discount ;order NOW.</p>
+<p class="first_sms7"></p>
+<p class="marquee_para">The big discount offer each product 20 % discount ;order NOW.</p>
+<p class="first_sms8"></p>
+<p class="marquee_para">The big discount offer each product 20 % discount ;order NOW.</p>
 </div>
 </marquee>
 
+<div id="all_product_heding">All product</div>
+<div class="div_all_product">
+<div>
+<div>
+<a href="https://sk23.github.io/m-pro/"><button id="man" class="btn">  <div >Men</div></button>
+</a>
+</div>
+<div>
+<a href=" https://sk23.github.io/wk-pro/">
+    <button class="btn" id="Women">Women & Kids</button>
+</a>
+</div>
+<div>
+    <a href= "https://sk23.github.io/hm-pro/">
+    <button class="btn" id="Home_&_Furniture">Home & Furniture</button>
+    </a>
+    
+    </div>
+
+</div>
+<div>
+
+
+
 </div>
 
-
-
-
-
+</div> -->
+</div>
+</div>
 <script>
-
-
-
-
-  
-let sec_a =document.getElementById("section_A");
-let sec_b =document.getElementById("section_B");
-let sec_c =document.getElementById("section_C");
-let sec_d =document.getElementById("section_D");
-let full_address = document.getElementById("address");
-
-
-
-
-
-function section_A() {
-
-let name_of_custemer_a = document.getElementById("name").value;
-// let name_of_custemer_a_2_9 = parseInt(document.getElementById("name").value);
-document.getElementById("section_B_h").innerHTML = `- ${name_of_custemer_a } select product -`;
-
-
-// console.log(name_of_custemer_a_2_9 )
-
-se = document.querySelector('#addres_add');
-output3 = se.value;
-document.getElementById("addres_add_se").innerHTML = output3
-console.log(output3)
-
-
-if ( document.getElementById("name").value == ``|| null) {
-alert(`${"ptriy grahak"} please enter name; without this information order is not confirmed `)
-document.getElementById("name").style.backgroundColor = "red"
-window.location.reload()
-}
-
-else if(document.getElementById("address").value == ``|| null)
-{alert(`${name_of_custemer_a} please enter full address; without this information order is not confirmed `)
-document.getElementById("address").style.backgroundColor = "red"
-window.location.reload()
-}
-
-else if(
-document.getElementById("addres_add").value == "select city" || ``|| null
-){alert(`${name_of_custemer_a} please select villege option; without this information order is not confirmed `)
-document.getElementById("addres_add").style.backgroundColor = "red"
-window.location.reload()
-}
-
-else{
-document.getElementById("name").disabled = true;
-document.getElementById("address").disabled = true
-document.getElementById("addres_add").disabled = true;
-// alert( document.getElementById("name").value +" "+"Thank you" + " your name and addres is save ; please fill product details");
-sec_b.style.opacity = 1;
-sec_a.style.opacity = 0.3;
-};
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-function section_B(){
-
-
-
-
-sec_b.style.opacity = 0.3;
-// sec_a.style.width= "0px";
-// sec_b.style.width = "0px";
-// sec_a.style.height= "0px";
-// sec_b.style.height = "0px";
-// sec_a.style.font= "0px";
-// sec_b.style.font = "0px";
-// sec_a.style.height= "0px";
-// sec_b.style.height = "0px";
-document.getElementById("product-name").disabled = true;
-
-
-let name_of_custemer = document.getElementById("name").value;
-let full_address = document.getElementById("address").value;
-
-
-selectElement = document.querySelector('#product-name');
-output1 = selectElement.value;
-
-se = document.querySelector('#addres_add');
-output3 = se.value;
-document.getElementById("addres_add_se").innerHTML = output3
-console.log(output3)
-
-selectElement = document.querySelector('#product-quntity');
-output2 = selectElement.value;
-
-//   document.getElementById("final-bill").innerHTML = output1 * output2 ;
-let ONE_PRODUCT_PRIZE = output1 * output2 / output2;
-
-let select = document.getElementById("product-name");
-let name_product_name = select.options[select.selectedIndex].text ; //returns the entire select with all the options
-
-// let selectADDRESS = document.getElementById("addres_add");
-// let addres_add = selectADDRESS.options[selectADDRESS.selectedIndex].text ; //returns the entire select with all the options
-
-
-
-let transactionid = document.getElementById("transaction_id").value;
-
-
-
-
-document.getElementById("qr_info").innerHTML = `<h1> Product Payment summary </h1>
-<br>
-product name = ${name_product_name}
-<br>
-get product discount is = 20%
-<br>
-product quantity = ${output2}
-<br>
-one ${name_product_name} prize is = ${ONE_PRODUCT_PRIZE} RS`;
-document.getElementById("qr_info_2").innerHTML =`<h2>total ${output2} product prise is = ${output1 * output2} RS</h2>`;
-
-sec_c.style.opacity = 1;
-
-alert(`${name_of_custemer}
-you order is = ${name_product_name}
-get discount is = 20%
-one ${name_product_name} prize is = ${ONE_PRODUCT_PRIZE} RS
-product quantity = ${output2}
-total ${output2} product prise is = ${output1 * output2} RS
-scan following QR code and  pay = ${output1 * output2} RS
-after payment note down the last 4 digits of UPI transaction id`)
-
-/* background-color: rgb(228, 162, 81); */
-/* background-color: rgb(215, 235, 177); */
+let btn_btn_1 = document.getElementById("man");
+let btn_btn_3 = document.getElementById("Women");
+let btn_btn_4 = document.getElementById("Home_&_Furniture");
 setInterval(() => {
 
-document.getElementById("colour_change").style.backgroundColor = "rgb(228, 162, 81)"
+btn_btn_1.style.backgroundColor = "white";
+btn_btn_1.style.color = "black";
+btn_btn_3.style.backgroundColor = "white";
+btn_btn_3.style.color = "black";
+btn_btn_4.style.backgroundColor = "white";
+btn_btn_4.style.color = "black";
+
 }, 1000);
-setInterval(() => {
 
-document.getElementById("colour_change").style.backgroundColor = " rgb(215, 235, 177)"
+setInterval(() => {
+btn_btn_1.style.backgroundColor = "black";
+btn_btn_1.style.color = "white";
+btn_btn_3.style.backgroundColor = "black";
+btn_btn_3.style.color = "white";
+btn_btn_4.style.backgroundColor = "black";
+btn_btn_4.style.color = "white";
+
 }, 2000);
 
-document.getElementById("hide_procede_tp_payment_btn_1").disabled = true;
-document.getElementById("hide_procede_tp_payment_btn").disabled = true;
-document.getElementById("product-quntity").disabled = true;
 
-
-
-
-// document.querySelector(".a1").classList.add("small");
-// document.querySelector(".a2").classList.add("small");
-// document.querySelector(".a3").classList.add("small");
-// document.querySelector(".a4").classList.add("small");
-// document.querySelector(".a5").classList.add("small");
-// document.querySelector(".a6").classList.add("small");
-// document.querySelector(".a7").classList.add("small");
-// document.querySelector(".a8").classList.add("small");
-// document.querySelector(".a9").classList.add("small");
-// document.querySelector(".a10").classList.add("small");
-// document.querySelector(".a11").classList.add("small");
-// document.querySelector(".a12").classList.add("small");
-// };
-document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
-        document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
-        document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
-
-
-
-setTimeout(() => {
-    alert(`${name_of_custemer} या QR कोड वर कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
-    UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि लिहा.`)
-}, 2000);
-
+const time = new Date().getHours();
+let greeting;
+if (time < 12) {
+  greeting = "Good Morning dear customers";
+} else if (time < 17) {
+  greeting = "Good Afternoon dear customers";
+} else {
+  greeting = "Good Evening dear customers";
 }
-
-
-
-
-
-
-
-
-
-
-function section_C(){
-let name_of_custemer_a = document.getElementById("name").value;
-
-document.getElementById("section_D_h").innerHTML = `- ${name_of_custemer_a} your order details -`;
-
-// document.getElementById("qr").style.opacity = 1;
-
-selectElement = document.querySelector('#product-name');
-output1 = selectElement.value;
-
-selectElement = document.querySelector('#product-quntity');
-output2 = selectElement.value;
-
-//   document.getElementById("final-bill").innerHTML = output1 * output2 ;
-let ONE_PRODUCT_PRIZE = output1 * output2 / output2;
-
-let select = document.getElementById("product-name");
-let name_product_name = select.options[select.selectedIndex].text ; //returns the entire select with all the options
-
-let transactionid = document.getElementById("transaction_id").value;
-
-
-let name_of_custemer = document.getElementById("name").value;
-
-//  let selectADDRESS = document.getElementById("addres_add");
-// let addres_add = selectADDRESS.options[selectADDRESS.selectedIndex].text ; //returns the entire select with all the options
-
-
-se = document.querySelector('#addres_add');
-output3 = se.value;
-document.getElementById("addres_add_se").innerHTML = output3
-console.log(output3)
-
-document.getElementById("name_of_custemer").innerHTML = ` ${name_of_custemer} `;
-document.getElementById("addres_add").innerHTML = ` ${output3} `;
-document.getElementById("Address_NEAR_BY").innerHTML =` ${full_address.value}`;
-document.getElementById("product_name").innerHTML =` ${name_product_name} `;
-document.getElementById("product_quantity").innerHTML =` ${output2} `;
-document.getElementById("one_product_prise").innerHTML =` ${select.options[select.selectedIndex].text} prize is = ${ONE_PRODUCT_PRIZE} RS `;
-document.getElementById("get_discount").innerHTML =`20%`;
-document.getElementById("total_product_prize").innerHTML =`${output2} product prise is = ${output1 * output2} RS`;
-document.getElementById("transaction_ID").innerHTML =` XXXXX${transactionid} `;
-document.getElementById("date").innerHTML = ` ${new Date} `;
-
-
-document.getElementById("hide_procede_tp_payment_btn").style.opacity = 1;
-document.getElementById("hide_procede_tp_payment_btn_1").style.opacity = 1;
-// document.getElementById("hide_procede_tp_payment_btn_2").style.backgroundColor = "red";
-// document.getElementById("hide_procede_tp_payment_btn_2").style.color = "white";
-// document.getElementById("hide_procede_tp_payment_btn_2").style.border = "3px solid black";
-
-
-
-if ( document.getElementById("transaction_id").value == ``||null)
-{
-alert("Please enter UPI Transaction id ;without this information Order is not confirmed .")
-section_b()
-}else{
-// sec_a.style.height = "2px";
-// sec_b.style.height = "2px";
-// sec_c.style.height = "2px";
-sec_c.style.opacity = 1;
-sec_d.style.opacity = 1;
-
-
-
-
-
-
-}
-setInterval(() => {
-
-document.getElementById("get-bill").style.backgroundColor = "rgb(235, 69, 57)"
-}, 1000);
-setInterval(() => {
-document.getElementById("get-bill").style.backgroundColor = "rgb(84, 57, 235)"
-}, 2000);
-
-const elementA = document.getElementById("section_A");
-elementA.remove();
-const elementB = document.getElementById("section_B");
-elementB.remove();
-const elementC = document.getElementById("section_C");
-elementC.remove();
-};
-
-let tomorrow = () => {
-
-// Creating the date instance
-let d = new Date();
-
-// Adding one date to the present date
-d.setDate(d.getDate() + 7);
-
-let year = d.getFullYear()
-let month = String(d.getMonth() + 1)
-let day = String(d.getDate())
-
-// Adding leading 0 if the day or month
-// is one digit value
-month = month.length == 1 ?
-month.padStart('2', '0') : month;
-
-day = day.length == 1 ?
-day.padStart('2', '0') : day;
-
-// Printing the present date
-console.log(`${day}-${month}-${year}`);
-
-
-
-} ;
-
-tomorrow()
-
-function gotowhatsapp(){
-let name_of_custemer = document.getElementById("name_of_custemer").innerHTML;
-let addres_add =  document.getElementById("addres_add_se").innerHTML;
-
-let Address_NEAR_BY =  document.getElementById("Address_NEAR_BY").innerHTML;
-let product_name = document.getElementById("product_name").innerHTML ;
-let product_quantity = document.getElementById("product_quantity").innerHTML ;
-let one_product_prise =document.getElementById("one_product_prise").innerHTML ;
-let get_discount = document.getElementById("get_discount").innerHTML ;
-let total_product_prize  = document.getElementById("total_product_prize").innerHTML ;
-let transaction_ID = document.getElementById("transaction_ID").innerHTML;
-
-
-
-
-
-
-var url = "https://wa.me/919834926132?text="
-+ "custemer name :-" + name_of_custemer +  "%0a" + "%0a"
-+"Name of villege :-" + " " + addres_add +  "%0a" + "%0a"
-+  "address:- " + Address_NEAR_BY + "%0a" + "%0a"
-+ "product name:- " + product_name + "%0a" + "%0a"
-+ "product quantity:- " + product_quantity + "%0a" + "%0a"
-+ "ONE"+ one_product_prise + "%0a" + "%0a"
-+ "get discount:- " + `20%` + "%0a" + "%0a"
-+  "TOTAL"  +  total_product_prize  +  "%0a" + "%0a"
-+"date = "+ " " + new Date +  "%0a"  + "order delivery :- within 6 Days"+ "%0a"+ "%0a"
-+"UPI Transaction id = "+ " " + transaction_ID +  "%0a" + "%0a"
-
-
-window.open(url, '_blank').focus();
-}
-
-
-
-
-
+document.querySelector(".first_sms1").innerHTML = greeting;
+document.querySelector(".first_sms2").innerHTML = greeting;
+document.querySelector(".first_sms3").innerHTML = greeting;
+document.querySelector(".first_sms4").innerHTML = greeting;
+document.querySelector(".first_sms5").innerHTML = greeting;
+document.querySelector(".first_sms6").innerHTML = greeting;
+document.querySelector(".first_sms7").innerHTML = greeting;
+document.querySelector(".first_sms8").innerHTML = greeting;
 
 
 
 </script>
 </body>
 </html>
+
