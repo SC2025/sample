@@ -190,10 +190,10 @@ display: flex;
 }
 
 .paymentall{
-
+width: 100;
 border: 1px solid;
 }
-.gp{
+/* .gp{
         border-radius: 50%;
        
         border: 20px rgb(255, 18, 18);
@@ -203,16 +203,24 @@ text-align: center;
 justify-content: center;
 align-items: center;
 display: flex;
-}
+} */
 .gpbtn{
-        background-color: rgb(0, 0, 0);
-    border-radius: 50%;
-        margin: 20px;
+        border-radius: 100%;
+        width: fit-content;
+        background-color: black;
+        padding: 5px;
 }
 .google_pay3{
         align-items: center;
         justify-content: center;
         text-align: center;
+}
+.gp{
+        border-radius: 100%;
+        width: fit-content;
+        background-color: black;
+        padding: 5px;
+    
 }
 </style>
 </head>
@@ -331,7 +339,7 @@ display: flex;
         behavior="alternate"
         id="marquee"
         scrollamount = "7">
-        <h1 class="google_pay3">click to payment @ select payment app</p>
+        <div class="google_pay3">click to payment @ select payment app</div>
         <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="" alt="" ></button></a> 
 
                 <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
