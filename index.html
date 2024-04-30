@@ -20,11 +20,11 @@ font-weight: 1000;
 #product-quntity,#get-bill,#product-name{
 opacity: 1;
 }
-/* #qr{
+#qr{
 height: 200px;
 width: 200px;
 opacity: 1;
-} */
+}
 
 /* #section_A>p,input ,#hide_procede_tp_payment_btn_1{
 height: 0px;
@@ -44,7 +44,7 @@ font-weight: 1000;
 #section_B{
 border: 2PX solid rgb(255, 0, 0);
 border: 2PX solid;
-opacity: 1;
+opacity: 0;
 padding: 10px;
 
 gap: 50px;
@@ -54,7 +54,7 @@ font-weight: 1000;
 }
 #section_C{
 border: 2PX solid rgb(255, 0, 0);
-opacity: 1;
+opacity: 0;
 padding: 10px;
 
 gap: 10px;
@@ -75,7 +75,7 @@ padding: 5px;
 
 }
 
-
+#marquee
 
 option{
 padding: 5px;
@@ -188,8 +188,7 @@ align-items: center;
 justify-content: center;
 display: flex;
 }
-
-.paymentall{
+#paymentall{
 width: 100;
 display: flex;
 border: 1px solid;
@@ -275,59 +274,16 @@ align-items: center;
 <select  name="" id="product-name" onchange="alert(`${document.getElementById(`name`).value} you select  ${this.options[this.selectedIndex].text} is conform to proceed `)">
 <option  value="00" >Select Product</option>
 
-<option value="14">Checks Multi-Color RUMAL</option>
-<option value="21">Checks White-Color RUMAL</option>
-
-  <option value="20">Socks</option>
-
-  <option value="99">Gym sport Baniyan M Size</option>
-<option value="105">Gym sport Baniyan  L size</option>
-<option value="108">Gym sport Baniyan  XL size</option>
-<option value="111">Gym sport Baniyan XXL font-size</option>
-
-<option  value="80" >ESSA Cotton Innerwear 85 CM </option>
-<option  value="85" >ESSA Cotton Innerwear 90 CM </option>
-<option  value="90">ESSA Cotton Innerwear 95 CM</option>
-<option  value="95">ESSA Cotton Innerwear 100 CM</option>
-
-<option value="90">LUX Cotton Innerwear 85 CM</option>
-<option value="91">LUX Cotton Innerwear 90 CM</option>
-<option value="95">LUX Cotton Innerwear 95 CM</option>
-<option value="110">LUX Cotton Innerwear 100 CM</option>
-
-<option value="105">Macho Cotton Innerwear  85 CM</option>
-<option value="105">Macho Cotton Innerwear  90 CM</option>
-<option value="115">Macho Cotton Innerwear 95 CM</option>
-<option value="120">Macho Cotton Innerwear 100 CM</option>
-
-<option value="69">LUX white Banyan 85 CM</option>
-<option value="69">LUX white Banyan 90 CM</option>
-<option value="70">LUX white Banyan 95 CM</option>
-<option value="70">LUX white Banyan 100 CM</option>
-
-<option value="75">LUX colour Banyan 85 CM</option>
-<option value="78">LUX colour Banyan 90 CM</option>
-<option value="83">LUX colour Banyan 95 CM</option>
-<option value="88">LUX colour Banyan 100 CM</option>
-
-<option value="90">LUX white-lining Banyan 85 CM</option>
-<option value="95">LUX white-lining Banyan 90 CM</option>
-<option value="95">LUX white-lining Banyan 95 CM</option>
-<option value="100">LUX white-lining Banyan 100 CM</option>
-
-<!-- <option value="99">Macho Banyan 85 CM</option>
-<option value="105">Macho Banyan 90 CM</option>
-<option value="110">Macho Banyan 95 CM</option>
-<option value="120">Macho Banyan 100 CM</option> -->
-
-
+<option value="9">Steel hangers</option>
+<option value="7">plastic hangers</option>
+<option value="3">HARD Plastic Cloth Clips</option>
+<option value="15">Napkins <BR> Size 35 CM * 21 CM</option>
+<option value="18">Napkins <BR> Size  40 CM * 25 CM</option>
 
 </select>
 
 <select name="" id="product-quntity">
-<option id="a1" value="4">4  pieces</option>
 <option value="6">6  pieces</option>
-<option value="8">8  pieces</option>
 <option value="10">10  pieces</option>
 <option value="12">12  pieces</option>
 </select>
@@ -343,25 +299,23 @@ align-items: center;
 </div>
 
 </p>
+<div >
+<!-- <img id="qr"  src="qr.jpg"  alt=""> -->
+<div id="paymentall">
+    <marquee
+    behavior="alternate"
+    id="marquee"
+    scrollamount = "7">
 
-<div class="paymentall">
-        <marquee
-        behavior="alternate"
-        id="marquee"
-        scrollamount = "7">
-
-        <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
-        <a id="google_pay1" href=""><button class="gpbtn"><img  class="gp" src="gp.png" alt="" ></button></a> 
-        <a id="google_pay3" href=""><button class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a> 
-       
-       
-        </marquee>
-        
+    <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
+    <a id="google_pay1" href=""><button class="gpbtn"><img  class="gp" src="gp.png" alt="" ></button></a> 
+    <a id="google_pay3" href=""><button class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a> 
+   
+   
+    </marquee>
+    
 
 </div>
-
-  
-       <!-- <img id="qr"  src="qr.jpg"  alt=""> -->
 </div>
 
 <p  id="colour_change" class="big_font">Enter UPI transactiion id last 4 digit<input  id="transaction_id" value="" type="text"></p>
@@ -524,10 +478,6 @@ output2 = selectElement.value;
 //   document.getElementById("final-bill").innerHTML = output1 * output2 ;
 let ONE_PRODUCT_PRIZE = output1 * output2 / output2;
 
-
-
-
-
 let select = document.getElementById("product-name");
 let name_product_name = select.options[select.selectedIndex].text ; //returns the entire select with all the options
 
@@ -581,11 +531,6 @@ document.getElementById("product-quntity").disabled = true;
 
 
 
-        document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
-        document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
-        document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
-
-
 // document.querySelector(".a1").classList.add("small");
 // document.querySelector(".a2").classList.add("small");
 // document.querySelector(".a3").classList.add("small");
@@ -599,6 +544,12 @@ document.getElementById("product-quntity").disabled = true;
 // document.querySelector(".a11").classList.add("small");
 // document.querySelector(".a12").classList.add("small");
 // };
+document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
+        document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
+        document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
+
+
+
 setTimeout(() => {
     alert(`${name_of_custemer} या QR कोड वर कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
     UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि लिहा.`)
@@ -621,7 +572,7 @@ let name_of_custemer_a = document.getElementById("name").value;
 document.getElementById("section_D_h").innerHTML = `- ${name_of_custemer_a} your order details -`;
 
 // document.getElementById("qr").style.opacity = 1;
-
+document.getElementById("paymentall").style.opacity = 0;
 selectElement = document.querySelector('#product-name');
 output1 = selectElement.value;
 
@@ -668,23 +619,23 @@ document.getElementById("hide_procede_tp_payment_btn_1").style.opacity = 1;
 
 
 
-// if ( document.getElementById("transaction_id").value == ``||null)
-// {
-// alert("Please enter UPI Transaction id ;without this information Order is not confirmed .")
-// section_b()
-// }else{
-// // sec_a.style.height = "2px";
-// // sec_b.style.height = "2px";
-// sec_c.style.height = "2px";
-// sec_c.style.opacity = 1;
-// sec_d.style.opacity = 1;
+if ( document.getElementById("transaction_id").value == ``||null)
+{
+alert("Please enter UPI Transaction id ;without this information Order is not confirmed .")
+section_b()
+}else{
+// sec_a.style.height = "2px";
+// sec_b.style.height = "2px";
+sec_c.style.height = "2px";
+sec_c.style.opacity = 1;
+sec_d.style.opacity = 1;
 
 
 
 
 
 
-// }
+}
 setInterval(() => {
 
 document.getElementById("get-bill").style.backgroundColor = "rgb(235, 69, 57)"
