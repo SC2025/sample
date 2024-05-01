@@ -1,43 +1,90 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    body{
-        background-color:rgb(122, 42, 196);
-    }
-    .div1{
-        /* height: fit-content;
-        width: fit-content; */
-        border: 3px solid rgb(144, 135, 135);
-        display: flex;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        /* background-color: rgb(255, 255, 255); */
-        padding: 8px;
-        margin-bottom: 3%;
-    }
-    .div2{
-      
-        height: 60vh;
-        width: 50%;
-        border: 3px solid rgb(189, 160, 160);
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        margin: 1px;
-        background-color: azure;
-        color: white;
-        padding: 5%;
-        border-radius: 14%;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
 
-    }
-    img{
-        border-radius: 14%;
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    border-radius: 14%;
+}
+
+.name{
+display: flex;
+justify-content: center;
+text-align: center;
+margin: 3px;
+   
+    background-color: rgb(0, 0, 0);
+    padding: 3px;
+    font-size: 20px;
+    border: 1px black solid;
+    display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        color: antiquewhite;
+}
+.main{
+    display: flex;
+justify-content: center;
+text-align: center;
+align-items: center;
+}
+.sub_main{
+    justify-content: center;
+text-align: center;
+align-items: center;
+
+}
+.product-name{
+    display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+border-radius: 14%;
+    background-color: rgb(0, 0, 0);
+    padding: 3px;
+    font-size: 20px;
+    border: 1px rgb(255, 0, 0) solid;
+    display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        color: antiquewhite;
+}
+
+
+
+.button-product-code{
+ margin: 5px;
+    align-items: center;
+justify-content: center;
+text-align: center;
+border-radius: 14%;
+    background-color: rgb(0, 0, 0);
+    padding: 3px;
+    font-size: 10px;
+    border: 1px rgb(255, 0, 0) solid;
+        color: antiquewhite;
+}
+.main{
+    display: flex;
+justify-content: center;
+text-align: center;
+align-items: center;
+
+
+}
+
+
+img{box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+     margin: 5px;
         height: 40vh;
         width: 99%;
         border: 3px solid rgb(0, 0, 0);
@@ -45,9 +92,26 @@
         text-align: center;
         align-items: center;
         justify-content: center;
+color: black;
 
 
     }
+    body{
+        background-color: rgb(210, 128, 128);
+    }
+.sub_main{
+    width: 50%;
+    justify-content: center;
+text-align: center;
+align-items: center;
+padding: 3%;
+color: azure;
+border: 2px solid black;
+margin: 2%;
+background-color: rgb(255, 255, 255);
+box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+border: 2px rgb(210, 0, 0) solid;
+}
 table{
     border: 1px solid black;
 padding: 2px;
@@ -59,75 +123,182 @@ display: flex;
         align-items: center;
         justify-content: center;
 }
-    tr,th,td{
+   tr,td{
+        display: flex;
 border: 1px solid black;
-padding: 2px;
+padding: 5px;
 font: bold;
 font-weight: 1000;
 color: black;
-display: flex;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-}
-
-.name{
-    border-radius: 14%;
-    background-color: rgb(0, 0, 0);
-    padding: 3px;
-    font-size: 20px;
-    border: 1px black solid;
-    display: flex;
         text-align: center;
         align-items: center;
         justify-content: center;
 }
 </style>
+</head>
 <body>
-<div>
 
-<div class="div1">
+<div class="header">
+<div class="name"> सह्याद्री  कलेक्शन</div>
+</div>
 
-    <div class="div2">
-        <div class="name">Steel hangers</div>
-        <button class="button-product-code">product code-HM1</button>
 
-       <div class="imgdiv"><a href="">  <img src="pp.png" alt="HM5"></a></div> 
-           
-            <div>
-              
-              
-                <table>
-                    <tr>
-                    <td>1 pieces</td>
-                    <td>7 RS</td>
-                    </tr>
-                    </table>
-         
-            </div>
-  
-    </div>
-<div class="div2">2</div>
 
+<div class="main">
+   
+   
+   
+    <a class="sub_main" href="https://sk23.github.io/hm-pay/">
+
+        <div class="product-name">Steel hangers</div>
+<button class="button-product-code">product code-HM1</button>
+
+        <div > <img src="HM1.jpg" alt="HM1">
+<table>
+<tr>
+<td>1 pieces</td>
+<td>9 RS</td>
+</tr>
+</table>
+</DIV>
+</a>
+
+
+<a class="sub_main" href="https://sk23.github.io/hm-pay/">
+
+    <div class="product-name">Steel hangers</div>
+<button class="button-product-code">product code-HM1</button>
+
+    <div > <img src="HM1.jpg" alt="HM1">
+<table>
+<tr>
+<td>1 pieces</td>
+<td>9 RS</td>
+</tr>
+</table>
+</DIV>
+</a>
 </div>
 
 
 
 
-<div class="div1">
 
-    <div class="div2">
-    
-    </div>
-<div class="div2">4</div>
 
+
+
+<div class="main">
+   
+   
+   
+    <a class="sub_main" href="https://sk23.github.io/hm-pay/">
+
+        <div class="product-name">Steel hangers</div>
+<button class="button-product-code">product code-HM1</button>
+
+        <div > <img src="HM1.jpg" alt="HM1">
+<table>
+<tr>
+<td>1 pieces</td>
+<td>9 RS</td>
+</tr>
+</table>
+</DIV>
+</a>
+
+
+<a class="sub_main" href="https://sk23.github.io/hm-pay/">
+
+    <div class="product-name">Steel hangers</div>
+<button class="button-product-code">product code-HM1</button>
+
+    <div > <img src="HM1.jpg" alt="HM1">
+<table>
+<tr>
+<td>1 pieces</td>
+<td>9 RS</td>
+</tr>
+</table>
+</DIV>
+</a>
 </div>
 
 
 
 
 
-<div></div>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="main">
+   
+   
+   
+    <a class="sub_main" href="https://sk23.github.io/hm-pay/">
+
+        <div class="product-name">Steel hangers</div>
+<button class="button-product-code">product code-HM1</button>
+
+        <div > <img src="HM1.jpg" alt="HM1">
+<table>
+<tr>
+<td>1 pieces</td>
+<td>9 RS</td>
+</tr>
+</table>
+</DIV>
+</a>
+
+
+<a class="sub_main" href="https://sk23.github.io/hm-pay/">
+
+    <div class="product-name">Steel hangers</div>
+<button class="button-product-code">product code-HM1</button>
+
+    <div > <img src="HM1.jpg" alt="HM1">
+<table>
+<tr>
+<td>1 pieces</td>
+<td>9 RS</td>
+</tr>
+</table>
+</DIV>
+</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+    </script>
 </body>
 </html>
+
+
+
