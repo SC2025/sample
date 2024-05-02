@@ -95,6 +95,13 @@ border-radius: 100PX;
 .STAR{
 color: rgb(255, 255, 255);
 }
+/* #qr{
+margin-left: 30%;
+    justify-content: center;
+    height: 30%;
+    width: 30%;
+    background-color: black;
+} */
 .big_font{
 font-size: 15px;
 background-color: rgb(6, 255, 255);
@@ -356,7 +363,7 @@ and proceed to payment.`)">
 
 </p>
 <div >
-<!-- <img id="qr"  src="qr.jpg"  alt=""> -->
+<!-- <img id="qr"  src=""  alt=""> -->
 
 <div class="paymentall">
     <marquee
@@ -364,15 +371,17 @@ and proceed to payment.`)">
     id="marquee"
     scrollamount = "7">
     <div class="button2">------Payment App option-----</div>
+ 
     <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
     <a id="google_pay1" href=""><button class="gpbtn"><img  class="gp" src="gp.png" alt="" ></button></a> 
     <a id="google_pay3" href=""><button class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a> 
-   
+
    
     </marquee>
-    
+
 
 </div>
+
 </div>
 
 <p  id="colour_change" class="big_font">Enter UPI transactiion id last 4 digit<input  id="transaction_id" value="" type="text"></p>
@@ -443,7 +452,11 @@ let sec_b =document.getElementById("section_B");
 let sec_c =document.getElementById("section_C");
 let sec_d =document.getElementById("section_D");
 let full_address = document.getElementById("address");
+var name_of_custemer_a = document.getElementById("name").value;
 
+function asdfg(){
+    alert("asdf")
+}
 
 
 
@@ -509,8 +522,8 @@ function section_B(){
 let vvvvv = document.getElementById("product-name");
 if(
     vvvvv.value == "00"
-){alert(`${name_of_custemer_a} please select villege option; without this information order is not confirmed `)
-document.getElementById("product-name").style.backgroundColor = " #9ab7f0"
+){alert(`${name_of_custemer_a} please select product name option; without this information order is not confirmed `)
+document.getElementById("product-name").style.backgroundColor = "#000000"
 
 }else{section_hj()}}
 
@@ -619,27 +632,22 @@ document.getElementById("product-quntity").disabled = true;
 // document.querySelector(".a11").classList.add("small");
 // document.querySelector(".a12").classList.add("small");
 // };
-document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
+
+
+    document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
         document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
         document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
 
 
 
+// document.getElementById("qr").src ="https://chart.googleapis.com/chart?="+"upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection";
+
 setTimeout(() => {
     alert(`${name_of_custemer}
     कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
-    पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.`)
-}, 2000);
-
-
-
-    setInterval(() => {
-    alert(`${name_of_custemer}
-    कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
-    पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.`);
-
-}, 15000);
-
+    पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.
+    जर पेमेंट आगोदर झाले असेल तर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि लिहा`)
+}, 1000);
 
 
 
