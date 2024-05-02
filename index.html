@@ -322,11 +322,11 @@ and proceed to payment.`)">
     id="marquee"
     scrollamount = "7">
     <div class="button2">------Payment App option-----</div>
-    <button onclick="gpapponclick()">hjjjjjhhhhhhhhhhhhhhhh
+  
         <a  id="google_pay2" href=""><button  onclick="gpapponclick()" class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
         <a  id="google_pay1" href=""><button  onclick="gpapponclick()" class="gpbtn"><img  class="gp" src="gp.png" alt="" ></button></a> 
         <a  id="google_pay3" href=""><button  onclick="gpapponclick()" class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a> 
-    </button>
+
  
    
     </marquee>
@@ -398,11 +398,11 @@ scrollamount = "4">
 
 
   
-let sec_a =document.getElementById("section_A");
-let sec_b =document.getElementById("section_B");
-let sec_c =document.getElementById("section_C");
-let sec_d =document.getElementById("section_D");
-let full_address = document.getElementById("address");
+var sec_a =document.getElementById("section_A");
+var sec_b =document.getElementById("section_B");
+var sec_c =document.getElementById("section_C");
+var sec_d =document.getElementById("section_D");
+var full_address = document.getElementById("address");
 
 
 
@@ -410,8 +410,8 @@ let full_address = document.getElementById("address");
 
 function section_A() {
 
-let name_of_custemer_a = document.getElementById("name").value;
-// let name_of_custemer_a_2_9 = parseInt(document.getElementById("name").value);
+var name_of_custemer_a = document.getElementById("name").value;
+// var name_of_custemer_a_2_9 = parseInt(document.getElementById("name").value);
 document.getElementById("section_B_h").innerHTML = `- ${name_of_custemer_a } select product -`;
 
 
@@ -470,76 +470,13 @@ sec_a.style.opacity = 0.3;
 function section_B(){
 
 
-
-
-sec_b.style.opacity = 0.3;
-// sec_a.style.width= "0px";
-// sec_b.style.width = "0px";
-// sec_a.style.height= "0px";
-// sec_b.style.height = "0px";
-// sec_a.style.font= "0px";
-// sec_b.style.font = "0px";
-// sec_a.style.height= "0px";
-// sec_b.style.height = "0px";
-document.getElementById("product-name").disabled = true;
-
-
-let name_of_custemer = document.getElementById("name").value;
-let full_address = document.getElementById("address").value;
-
-
-selectElement = document.querySelector('#product-name');
-output1 = selectElement.value;
-
-se = document.querySelector('#addres_add');
-output3 = se.value;
-document.getElementById("addres_add_se").innerHTML = output3
-console.log(output3)
-
-selectElement = document.querySelector('#product-quntity');
-output2 = selectElement.value;
-
-//   document.getElementById("final-bill").innerHTML = output1 * output2 ;
-let ONE_PRODUCT_PRIZE = output1 * output2 / output2;
-
-let select = document.getElementById("product-name");
-let name_product_name = select.options[select.selectedIndex].text ; //returns the entire select with all the options
-
-// let selectADDRESS = document.getElementById("addres_add");
-// let addres_add = selectADDRESS.options[selectADDRESS.selectedIndex].text ; //returns the entire select with all the options
-
-
-
-let transactionid = document.getElementById("transaction_id").value;
-
-
-
-
-document.getElementById("qr_info").innerHTML = `<h1> Product Payment summary </h1>
-<br>
-product name = ${name_product_name}
-<br>
-get product discount is = 20%
-<br>
-product quantity = ${output2}
-<br>
-one ${name_product_name} prize is = ${ONE_PRODUCT_PRIZE} RS`;
-document.getElementById("qr_info_2").innerHTML =`<h2>total ${output2} product prise is = ${output1 * output2} RS</h2>`;
-
-sec_c.style.opacity = 1;
-
-alert(`${name_of_custemer}
-you order is = ${name_product_name}
-get discount is = 20%
-one ${name_product_name} prize is = ${ONE_PRODUCT_PRIZE} RS
-product quantity = ${output2}
-total ${output2} product prise is = ${output1 * output2} RS
-scan following QR code and  pay = ${output1 * output2} RS
-after payment note down the last 4 digits of UPI transaction id`)
-
-/* background-color: rgb(228, 162, 81); */
-/* background-color: rgb(215, 235, 177); */
-setInterval(() => {
+    var name_of_custemer_a = document.getElementById("name").value;
+if(
+document.getElementById("product-name").value == "Select Product" ){alert(`${name_of_custemer_a} please select Select Product option; without this information order is not confirmed `)
+document.getElementById("product-name").style.backgroundColor = "black";
+section_A()
+}else{
+    setInterval(() => {
 
 document.getElementById("colour_change").style.backgroundColor = "black"
 document.getElementById("colour_change").style.color = "white"
@@ -557,6 +494,93 @@ document.getElementById("hide_procede_tp_payment_btn").disabled = true;
 document.getElementById("product-quntity").disabled = true;
 
 
+document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection";
+        document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection";
+        document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection";
+
+        setTimeout(() => {
+    alert(`${name_of_custemer}
+    कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
+    पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.`)
+}, 2000);
+
+
+sec_b.style.opacity = 0.3;
+// sec_a.style.width= "0px";
+// sec_b.style.width = "0px";
+// sec_a.style.height= "0px";
+// sec_b.style.height = "0px";
+// sec_a.style.font= "0px";
+// sec_b.style.font = "0px";
+// sec_a.style.height= "0px";
+// sec_b.style.height = "0px";
+document.getElementById("product-name").disabled = true;
+
+
+var name_of_custemer = document.getElementById("name").value;
+var full_address = document.getElementById("address").value;
+
+
+selectElement = document.querySelector('#product-name');
+output1 = selectElement.value;
+
+se = document.querySelector('#addres_add');
+output3 = se.value;
+document.getElementById("addres_add_se").innerHTML = output3
+console.log(output3)
+
+selectElement = document.querySelector('#product-quntity');
+output2 = selectElement.value;
+
+//   document.getElementById("final-bill").innerHTML = output1 * output2 ;
+var ONE_PRODUCT_PRIZE = output1 * output2 / output2;
+
+var select = document.getElementById("product-name");
+var name_product_name = select.options[select.selectedIndex].text ; //returns the entire select with all the options
+
+// var selectADDRESS = document.getElementById("addres_add");
+// var addres_add = selectADDRESS.options[selectADDRESS.selectedIndex].text ; //returns the entire select with all the options
+
+
+
+var transactionid = document.getElementById("transaction_id").value;
+
+
+
+
+document.getElementById("qr_info").innerHTML = `<h1> Product Payment summary </h1>
+<br>
+product name = ${name_product_name}
+<br>
+get product discount is = 20%
+<br>
+product quantity = ${output2}
+<br>
+one ${name_product_name} prize is = ${ONE_PRODUCT_PRIZE} RS`;
+document.getElementById("qr_info_2").innerHTML =`<h2>total ${output2} product prise is = ${output1 * output2} RS</h2>`;
+
+sec_c.style.opacity = 1;
+
+
+
+console.log(document.getElementById("product-name").value);
+alert(`${name_of_custemer}
+you order is = ${name_product_name}
+get discount is = 20%
+one ${name_product_name} prize is = ${ONE_PRODUCT_PRIZE} RS
+product quantity = ${output2}
+total ${output2} product prise is = ${output1 * output2} RS
+scan following QR code and  pay = ${output1 * output2} RS
+after payment note down the last 4 digits of UPI transaction id`)
+
+
+
+}
+
+
+/* background-color: rgb(228, 162, 81); */
+/* background-color: rgb(215, 235, 177); */
+
 
 
 // document.querySelector(".a1").classList.add("small");
@@ -572,20 +596,6 @@ document.getElementById("product-quntity").disabled = true;
 // document.querySelector(".a11").classList.add("small");
 // document.querySelector(".a12").classList.add("small");
 // };
-document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection";
-        document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection";
-        document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection";
-
-
-
-        setTimeout(() => {
-    alert(`${name_of_custemer}
-    कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
-    पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.`)
-}, 2000);
-
-
-
 } 
 
 
@@ -593,7 +603,7 @@ document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3
 
 function gpapponclick(){
     setTimeout(() => {
-    alert("asd")
+    alert("thank you select payment app")
 },500);
 
 }
@@ -603,7 +613,7 @@ function gpapponclick(){
 
 
 function section_C(){
-let name_of_custemer_a = document.getElementById("name").value;
+var name_of_custemer_a = document.getElementById("name").value;
 
 document.getElementById("section_D_h").innerHTML = `- ${name_of_custemer_a} your order details -`;
 
@@ -616,18 +626,18 @@ selectElement = document.querySelector('#product-quntity');
 output2 = selectElement.value;
 
 //   document.getElementById("final-bill").innerHTML = output1 * output2 ;
-let ONE_PRODUCT_PRIZE = output1 * output2 / output2;
+var ONE_PRODUCT_PRIZE = output1 * output2 / output2;
 
-let select = document.getElementById("product-name");
-let name_product_name = select.options[select.selectedIndex].text ; //returns the entire select with all the options
+var select = document.getElementById("product-name");
+var name_product_name = select.options[select.selectedIndex].text ; //returns the entire select with all the options
 
-let transactionid = document.getElementById("transaction_id").value;
+var transactionid = document.getElementById("transaction_id").value;
 
 
-let name_of_custemer = document.getElementById("name").value;
+var name_of_custemer = document.getElementById("name").value;
 
-//  let selectADDRESS = document.getElementById("addres_add");
-// let addres_add = selectADDRESS.options[selectADDRESS.selectedIndex].text ; //returns the entire select with all the options
+//  var selectADDRESS = document.getElementById("addres_add");
+// var addres_add = selectADDRESS.options[selectADDRESS.selectedIndex].text ; //returns the entire select with all the options
 
 
 se = document.querySelector('#addres_add');
@@ -688,17 +698,17 @@ const elementC = document.getElementById("section_C");
 elementC.remove();
 };
 
-let tomorrow = () => {
+var tomorrow = () => {
 
 // Creating the date instance
-let d = new Date();
+var d = new Date();
 
 // Adding one date to the present date
 d.setDate(d.getDate() + 7);
 
-let year = d.getFullYear()
-let month = String(d.getMonth() + 1)
-let day = String(d.getDate())
+var year = d.getFullYear()
+var month = String(d.getMonth() + 1)
+var day = String(d.getDate())
 
 // Adding leading 0 if the day or month
 // is one digit value
@@ -718,16 +728,16 @@ console.log(`${day}-${month}-${year}`);
 tomorrow()
 
 function gotowhatsapp(){
-let name_of_custemer = document.getElementById("name_of_custemer").innerHTML;
-let addres_add =  document.getElementById("addres_add_se").innerHTML;
+var name_of_custemer = document.getElementById("name_of_custemer").innerHTML;
+var addres_add =  document.getElementById("addres_add_se").innerHTML;
 
-let Address_NEAR_BY =  document.getElementById("Address_NEAR_BY").innerHTML;
-let product_name = document.getElementById("product_name").innerHTML ;
-let product_quantity = document.getElementById("product_quantity").innerHTML ;
-let one_product_prise =document.getElementById("one_product_prise").innerHTML ;
-let get_discount = document.getElementById("get_discount").innerHTML ;
-let total_product_prize  = document.getElementById("total_product_prize").innerHTML ;
-let transaction_ID = document.getElementById("transaction_ID").innerHTML;
+var Address_NEAR_BY =  document.getElementById("Address_NEAR_BY").innerHTML;
+var product_name = document.getElementById("product_name").innerHTML ;
+var product_quantity = document.getElementById("product_quantity").innerHTML ;
+var one_product_prise =document.getElementById("one_product_prise").innerHTML ;
+var get_discount = document.getElementById("get_discount").innerHTML ;
+var total_product_prize  = document.getElementById("total_product_prize").innerHTML ;
+var transaction_ID = document.getElementById("transaction_ID").innerHTML;
 
 
 
