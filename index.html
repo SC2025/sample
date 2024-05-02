@@ -575,15 +575,7 @@ document.getElementById("product-quntity").disabled = true;
 document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection";
         document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection";
         document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection";
-function gpapponclick(){
-    setTimeout(() => {
-    alert(`${name_of_custemer}
-    कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
-    पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.`);
 
-},500);
-
-}
 
 
         setTimeout(() => {
@@ -599,7 +591,12 @@ function gpapponclick(){
 
 
 
+function gpapponclick(){
+    setTimeout(() => {
+    alert("asd")
+},500);
 
+}
 
 
 
