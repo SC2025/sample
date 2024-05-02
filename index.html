@@ -322,9 +322,9 @@ and proceed to payment.`)">
     id="marquee"
     scrollamount = "7">
     <div class="button2">------Payment App option-----</div>
-    <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
-    <a id="google_pay1" href=""><button class="gpbtn"><img  class="gp" src="gp.png" alt="" ></button></a> 
-    <a id="google_pay3" href=""><button class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a> 
+    <a onclick="gpapponclick()" id="google_pay2" href=""><button  onclick="gpapponclick()" class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
+    <a onclick="gpapponclick()" id="google_pay1" href=""><button  onclick="gpapponclick()" class="gpbtn"><img  class="gp" src="gp.png" alt="" ></button></a> 
+    <a onclick="gpapponclick()" id="google_pay3" href=""><button  onclick="gpapponclick()" class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a> 
    
    
     </marquee>
@@ -573,20 +573,23 @@ document.getElementById("product-quntity").disabled = true;
 document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
         document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
         document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
+function gpapponclick() {
+    setTimeout(() => {
+    alert(`${name_of_custemer}
+    कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
+    पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.`);
+
+},500);
+}
 
 
-
-setTimeout(() => {
+        setTimeout(() => {
     alert(`${name_of_custemer}
     कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
     पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.`)
 }, 2000);
 
-setInterval(() => {
-    alert(`${name_of_custemer}
-    कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
-    पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.`)
-}, 15000);
+
 
 } 
 
