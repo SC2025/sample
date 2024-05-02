@@ -415,11 +415,18 @@ and proceed to payment.`)">
 <BR>
 <div class="sec_d_element"> <p>UPI transaction ID :- </p><P id="transaction_ID"></P></div>
 <BR>
+   
 
 
 
+<DIV>
+    <div class="sec_d_element"> <p>o :- </p><P id="ord_pree"></P></div>
 
+    <div class="sec_d_element"> <p>o :- </p><P id="ord_next"></P></div>
 
+    <div class="sec_d_element"> <p>o :- </p><P id="id"></P></div>
+
+</DIV>
 
 
 
@@ -514,6 +521,66 @@ sec_a.style.opacity = 0.3;
 
 
 
+function ORDER_ID_PREE() {
+    myDate = new Date
+        var hours = myDate.getHours(); 
+        hours = hours % 12; 
+        hours = hours ? hours : 12; 
+        var minutes = myDate.getMinutes(); 
+        minutes = minutes < 10 ? '0' + minutes : minutes; 
+        var myTime ="#" +hours + "@" + minutes + "-"
+        document.getElementById("ord_pree").innerHTML = myTime
+
+}
+
+
+function ORDER_ID_NEXT(){
+
+// Creating the date instance
+let d = new Date();
+
+// Adding one date to the present date
+d.setDate(d.getDate() + 7);
+
+let year = d.getFullYear()
+let month = String(d.getMonth() + 1)
+let day = String(d.getDate())
+
+// Adding leading 0 if the day or month
+// is one digit value
+month = month.length == 1 ?
+month.padStart('2', '0') : month;
+
+day = day.length == 1 ?
+day.padStart('2', '0') : day;
+
+// Printing the present date
+console.log((`${day}${month}${year}`))
+document.getElementById("ord_next").innerHTML = `${day}${month}${year}`;
+
+
+} ;
+
+
+
+
+
+
+function ORDER_ID() {
+    document.getElementById("id").innerHTML =   document.getElementById("ord_pree").innerHTML + document.getElementById("ord_next").innerHTML;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -572,6 +639,13 @@ let name_product_name = select.options[select.selectedIndex].text ; //returns th
 
 let transactionid = document.getElementById("transaction_id").value;
 
+
+
+
+
+ORDER_ID_PREE();
+ORDER_ID_NEXT();
+ORDER_ID();
 
 
 
@@ -664,7 +738,18 @@ setTimeout(() => {
 
 
 function section_C(){
+  
+ORDER_ID_PREE();
+ORDER_ID_NEXT();
+ORDER_ID();
+
 let name_of_custemer_a = document.getElementById("name").value;
+
+setTimeout(() => {
+    alert(`$(name_of_custemer_a)
+    Click to submit या बटन ला क्लिक करा;तुम्हाला व्हॉट्सॲप वर order information भेटेल आणि ऑर्डर कन्फर्म होईल.`
+)
+}, 1000);
 
 document.getElementById("section_D_h").innerHTML = `- ${name_of_custemer_a} your order details -`;
 
@@ -706,7 +791,7 @@ document.getElementById("get_discount").innerHTML =`20%`;
 document.getElementById("total_product_prize").innerHTML =`${output2} product prise is = ${output1 * output2} RS`;
 document.getElementById("transaction_ID").innerHTML =` XXXXX${transactionid} `;
 document.getElementById("date").innerHTML = ` ${new Date} `;
-
+document.getElementById("id").innerHTML =   document.getElementById("ord_pree").innerHTML + document.getElementById("ord_next").innerHTML;
 
 document.getElementById("hide_procede_tp_payment_btn").style.opacity = 1;
 document.getElementById("hide_procede_tp_payment_btn_1").style.opacity = 1;
@@ -747,6 +832,10 @@ const elementB = document.getElementById("section_B");
 elementB.remove();
 const elementC = document.getElementById("section_C");
 elementC.remove();
+
+
+
+
 };
 
 let tomorrow = () => {
@@ -770,18 +859,30 @@ day = day.length == 1 ?
 day.padStart('2', '0') : day;
 
 // Printing the present date
-console.log(`${day}-${month}-${year}`);
+document.getElementById("ord_next")`=${day}-${month}-${year}`;}
 
 
 
-} ;
 
-tomorrow()
+function ORDER_ID_PREE() {
+    myDate = new Date
+        var hours = myDate.getHours(); 
+        hours = hours % 12; 
+        hours = hours ? hours : 12; 
+        var minutes = myDate.getMinutes(); 
+        minutes = minutes < 10 ? '0' + minutes : minutes; 
+        var myTime ="#" +hours + "@" + minutes + "-"
+        document.getElementById("ord_pree").innerHTML = myTime
+
+}
+
+
+
+
 
 function gotowhatsapp(){
 let name_of_custemer = document.getElementById("name_of_custemer").innerHTML;
 let addres_add =  document.getElementById("addres_add_se").innerHTML;
-
 let Address_NEAR_BY =  document.getElementById("Address_NEAR_BY").innerHTML;
 let product_name = document.getElementById("product_name").innerHTML ;
 let product_quantity = document.getElementById("product_quantity").innerHTML ;
@@ -789,6 +890,47 @@ let one_product_prise =document.getElementById("one_product_prise").innerHTML ;
 let get_discount = document.getElementById("get_discount").innerHTML ;
 let total_product_prize  = document.getElementById("total_product_prize").innerHTML ;
 let transaction_ID = document.getElementById("transaction_ID").innerHTML;
+let oid = document.getElementById("id").innerHTML;
+let ordp =  document.getElementById("").innerHTML;
+let ordn =  document.getElementById("ord_next").innerHTML;
+
+
+
+function ORDER_ID_NEXT(){
+
+// Creating the date instance
+let d = new Date();
+
+// Adding one date to the present date
+d.setDate(d.getDate() + 7);
+
+let year = d.getFullYear()
+let month = String(d.getMonth() + 1)
+let day = String(d.getDate())
+
+// Adding leading 0 if the day or month
+// is one digit value
+month = month.length == 1 ?
+month.padStart('2', '0') : month;
+
+day = day.length == 1 ?
+day.padStart('2', '0') : day;
+
+// Printing the present date
+console.log((`${day}${month}${year}`))
+document.getElementById("ord_next").innerHTML = `${day}${month}${year}`;
+
+
+} ;
+
+
+
+
+
+
+function ORDER_ID() {
+    document.getElementById("id").innerHTML =  document.getElementById("ord_pree").innerHTML + document.getElementById("ord_next").innerHTML;
+}
 
 
 
@@ -796,6 +938,8 @@ let transaction_ID = document.getElementById("transaction_ID").innerHTML;
 
 
 var url = "https://wa.me/919834926132?text="
+
++ name_of_custemer_a + "your order is confirm" + "%0a"
 + "custemer name :-" + name_of_custemer +  "%0a" + "%0a"
 +"Name of villege :-" + " " + addres_add +  "%0a" + "%0a"
 +  "address:- " + Address_NEAR_BY + "%0a" + "%0a"
@@ -805,8 +949,8 @@ var url = "https://wa.me/919834926132?text="
 + "get discount:- " + `20%` + "%0a" + "%0a"
 +  "TOTAL"  +  total_product_prize  +  "%0a" + "%0a"
 +"date = "+ " " + new Date +  "%0a"  + "order delivery :- within 6 Days"+ "%0a"+ "%0a"
-+"UPI Transaction id = "+ " " + transaction_ID +  "%0a" + "%0a"
-
++"UPI Transaction id = "+ " " + transaction_ID +  "%0a" + "%0a" + name_of_custemer_a + "SEND A MESSAGE"
++ "ORDER ID ="+ oid  + "%0a"
 
 window.open(url, '_blank').focus();
 }
