@@ -1,830 +1,127 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-*{
-margin: 0;
-padding: 0;
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
 
-}
-/* #a1{
-opacity: 1;
-} */
-#get-bill{
-font-weight: 1000;
-}
-
-#qr_div{
-    margin: 3px;
-    padding: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: 2px solid black;
-}
-#qr{
-    height: 35%;
-    width: 35%;
-    margin: 3px;
-    padding: 3px;
-    display: flex;
-    border: 2px solid black;
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
-
-#section_A{
-border: 2PX solid rgb(252, 45, 30);
-opacity: 1;
-padding: 10px;
-
-/* background-color: rgb(228, 162, 81); */
-/* background-color: rgb(215, 235, 177); */
-gap: 10px;
-
-font-size: 20px;
-font-weight: 1000;
-}
-#section_B{
-border: 2PX solid rgb(255, 0, 0);
-border: 2PX solid;
-opacity: 0;
-padding: 10px;
-height: 30%;
-
-gap: 50px;
-
-font-size: 20px;
-font-weight: 1000;
-}
-#section_C{
-border: 2PX solid rgb(255, 0, 0);
-opacity: 0;
-padding: 10px;
-
-gap: 10px;
-
-font-size: 10px;
-font-weight: 1000;
-}
-#section_D{
-border: 2PX solid red;
-opacity: 0;
-padding: 10px;
-gap: 10px;
-font-size: 20px;
-font-weight: 1000;
-}
-#name,#address{
-padding: 5px;
-
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 
-.sec_d_p{
-    font-size: 13px;
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }
 
-option{
-padding: 5px;
-height: 20px;
-width: 20px;
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
-.button{
-height: 40px;
-width: 35vh;
-background-color:#5783db;
-color: rgb(255, 255, 255);
-border: 3px solid rgb(0, 0, 0);
-padding: 2px;
-font-weight: 500;
-margin-top: 3px;
-font: bold;
-border-radius: 100PX;
-
+.active {
+  background-color: #717171;
 }
 
-.STAR{
-color: rgb(255, 255, 255);
-}
-.big_font{
-font-size: 15px;
-background-color: rgb(6, 255, 255);
-border: 2px solid;
-padding: 4px;
-border: 2px solid black;
-color: rgb(0, 0, 0);
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-
-
-#qr_info_all_data{
-border: 2px solid black;
-padding: 5px;
-}
-#qr_info_2{
-background-color: rgb(235, 84, 84);
-border: 1px solid black;
-padding: 4px;
-color: rgb(255, 255, 255);
-font-weight: 900;
-}
-#transaction_id{
-height: 20px;
-padding: 5px;
-margin-left: 5px;
-}
-#colour_change{
-color: rgb(0, 0, 0);
-font-weight: 1000;
-}
-.sec_d_element{
-display: flex;
-font-size: 10px;
-}
-#submit_btn{
-height: 40px;
-width: 35vh;
-background-color: rgb(0, 0, 0);
-color: rgb(255, 255, 255);
-border: 3px solid rgb(194, 147, 119);
-padding: 2px;
-font-weight: 1000;
-margin-top: 3px;
-font: bold;
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
 
-/* .small{
-height: 0px;
-width: 0px;
-font-size: 0px;
-background-color: brown;
-display: flex;
-}
-.imgsmall{
-height: 1px;
-width: 1px;
-background-color: brown;
-display: flex;
-} */
-BODY{
-    background-color: rgb(223, 229, 234);
-}
-#section_A>P{
-font-size: 15PX;
-}
-#addres_add,#product-quntity,#product-name{
-height: 30PX;
-background-color: rgb(220, 236, 217);
-margin-top: 2PX;
-margin-bottom: 2PX;
-border: 1 px solid black;
-font: bold;
-font-weight: 1000;
-color: rgb(255, 0, 0);
-}
-#product-name>option{
-border: 1px solid black;
-}
-.main_hedding{
-display: flex;
-border: 0.1px solid black;
-align-items: center;
-justify-content: center;
-text-align: center;
-font-size: 20px;
-}
-.name{
-background-color: rgb(190, 220, 210);
-border: 2px solid black;
-font-size: 20px;
-font-weight: 1000;
-margin: 10px;
-padding: 5px;
-align-items: center;
-justify-content: center;
-display: flex;
-}
-.paymentall{
-width: 100;
-display: flex;
-border: 1px solid;
-}
-/* .gp{
-        border-radius: 50%;
-       
-        border: 20px rgb(255, 18, 18);
-height: 70px;
-padding: 5px;
-text-align: center;
-justify-content: center;
-align-items: center;
-display: flex;
-} */
-.gpbtn{
-        border-radius: 100%;
-        width: fit-content;
-        background-color: black;
-        padding: 3px;
-        text-align: center;
-justify-content: center;
-align-items: center;
-margin: 10px;
-}
-.google_pay3{height: 2px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-}
-.gp{
-        height: 50px;
-        display: flex;
-        border-radius: 100%;
-        width: fit-content;
-        background-color: black;
-        padding: 1px;
-        text-align: center;
-justify-content: center;
-align-items: center;
-}
-.button2{
-  width: fit-content;
-    background-color: rgb(224, 224, 188);
-    font-weight: 1000;
-    font-size: 20px;
-    padding: 3px;
-    border: 2px black;
-}
-#first_para{
-    opacity: 0;
-    font-size: 0px;
-}
-.qrimgbottomhedding{
-    
-    background-color: rgb(235, 171, 171);
-    padding: 2PX;
-    border: 1px solid black;
-    border-radius: 9%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-}
-#bill{
-    width: fit-content;
-    font-size: 15px;
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
 }
 </style>
 </head>
-<body id="body">
-
-
 <body>
 
-<div >
-    <div class="name"> सह्याद्री  कलेक्शन</div>
-    <div id="first_para">
-        <p id="op"></p>
-        <p id="on"></p>
-        
-         <div class="sec_d_element"> <p>Order ID :- </p><P id="oid"></P></div>
-         <p id="seven_day"></p>
-        
-    </div>
- 
-<div  id="section_A">
-  
-<div class="main_hedding" id="section_A_h">-Personal Details-</div>
-<p>Name:- <input id="name" type="text"></p>
+<h2>Automatic Slideshow</h2>
+<p>Change image every 2 seconds:</p>
 
-<p  >Address:- <select   name=""  id="addres_add">
-<option value="select city">select city</option>
-<option value="rahimatpur">Rahimatpur</option>
-<option value="boriv">Boriv</option>
-<option value="Naharwadi">Naharwadi</option>
-</select>
+<div class="slideshow-container">
 
-<p >Full Address:- <input id="address" type="text"></p></p>
-<div>
-<button  id="secA_btn"  class="button" onclick="secA()">Submit personal information</button>
-
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="shp1.jpg" style="width:100%">
+  <div class="text">1</div>
 </div>
 
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="shp2.jpg" style="width:100%">
+  <div class="text">2</div>
+</div>
 
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="shp3.jpg" style="width:100%">
+  <div class="text">3</div>
 </div>
 
 </div>
+<br>
 
-
-<div id="section_B" >
-<div class="main_hedding" id="section_B_h"></div>
-<select  name="" id="product-name" 
-onchange="alert(`${document.getElementById(`name`).value} 
-you select  ${this.options[this.selectedIndex].text} 
-Please select quantity.
-and proceed to payment.`)">
-<option  value="00" >Select Product</option>
-
-<option  value="00" >Select Product</option>
-<option value="13">Checks Multi-Color RUMAL 43 cm x 50 cm </option>
-<option value="15">Checks Multi-Color RUMAL 50 cm x 53 cm</option>
-<option value="21">Checks White-Color RUMAL 50 cm x 53 cm</option>
-
-  <option value="20">Socks</option>
-
-  <option value="99">Gym sport Baniyan M Size</option>
-<option value="105">Gym sport Baniyan  L size</option>
-<option value="108">Gym sport Baniyan  XL size</option>
-<option value="111">Gym sport Baniyan XXL font-size</option>
-
-<option  value="80" >ESSA Cotton Innerwear 85 CM </option>
-<option  value="85" >ESSA Cotton Innerwear 90 CM </option>
-<option  value="90">ESSA Cotton Innerwear 95 CM</option>
-<option  value="95">ESSA Cotton Innerwear 100 CM</option>
-
-<option value="90">LUX Cotton Innerwear 85 CM</option>
-<option value="91">LUX Cotton Innerwear 90 CM</option>
-<option value="95">LUX Cotton Innerwear 95 CM</option>
-<option value="110">LUX Cotton Innerwear 100 CM</option>
-
-<option value="105">Macho Cotton Innerwear  85 CM</option>
-<option value="105">Macho Cotton Innerwear  90 CM</option>
-<option value="115">Macho Cotton Innerwear 95 CM</option>
-<option value="120">Macho Cotton Innerwear 100 CM</option>
-
-<option value="69">LUX white Banyan 85 CM</option>
-<option value="69">LUX white Banyan 90 CM</option>
-<option value="70">LUX white Banyan 95 CM</option>
-<option value="70">LUX white Banyan 100 CM</option>
-
-<option value="75">LUX colour Banyan 85 CM</option>
-<option value="78">LUX colour Banyan 90 CM</option>
-<option value="83">LUX colour Banyan 95 CM</option>
-<option value="88">LUX colour Banyan 100 CM</option>
-
-<option value="90">LUX white-lining Banyan 85 CM</option>
-<option value="95">LUX white-lining Banyan 90 CM</option>
-<option value="95">LUX white-lining Banyan 95 CM</option>
-<option value="100">LUX white-lining Banyan 100 CM</option>
-
-
-</select>
-
-<select name="" id="product-quntity">
-    <option id="a1" value="4">4  pieces</option>
-    <option value="6">6  pieces</option>
-    <option value="8">8  pieces</option>
-    <option value="10">10  pieces</option>
-    <option value="12">12  pieces</option>
-</select>
-
-<button  class="button" id="secB_btn" onclick="secB()">view order summary</summary></button>
-
-
-
-
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
 </div>
-
-<div  id="section_C">
-
-    <div class="main_hedding" id="sec_c_heding"></div>
-    <h3><p id="order_id"></p></h3>
-<h3><p id="product_nane-print"></p></h3>
-<h3><p id="product_discount"></p></h3>
-<h3><p id="product_prise-print"></p></h3>
-<h3><p id="product_quantity-print"></p></h3>
-<h3><p class="qrimgbottomhedding" id="product_finalprise-print"></p></h3>
-
-<div>
-    <h3><p id="select_villege"></p></h3> 
-    <h3><p id="full_address"></p></h3>
-    <h3><p id="teansaction_id"></p></h3>
-</div>
-
-
-<div>
-    <div id="qr_div">
-    <img id="qr"  src="qr.jpg"  alt="qr.img"> 
-</div>
-<div class="paymentall">
-    <marquee
-    behavior="alternate"
-    id="marquee"
-    scrollamount = "7">
-    <p id="bill" class="qrimgbottomhedding"></p>
-
-    <!-- <div class="button2">-Payment App options-</div> -->
-    <!-- <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
-    <a id="google_pay1" href=""><button class="gpbtn"><img  class="gp" src="gp.png" alt="" ></button></a> 
-    <a id="google_pay3" href=""><button class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a>  -->
-    </marquee>
-    
-
-
-</div> 
-
- <p  id="id_input" class="big_font">Enter UPI transactiion id last 4 digit
-    <input  id="transaction_id" value="" type="text">
-</p>
-<BUtton class="button"  onclick="secC()">preview And Submit Payment data </BUtton>
-</div> 
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="section_D">
-<p class="main_hedding" id="secD_heding"></p>
-<p class="sec_d_p" id ="all_sec_d_info"></p>
-<p class="sec_d_p" id="i1"></p>
-<p class="sec_d_p" id="i2"></p>
-<p class="sec_d_p"  id="i3"></p>
-<p class="sec_d_p"  id="i4"></p>
-<p class="sec_d_p"  id="i5"></p>
-<p class="sec_d_p"  id="i6"></p>
-<p class="sec_d_p"  id="i7"></p>
-<p class="sec_d_p"  id="i8"></p>
-<p class="sec_d_p"  id="i9"></p>
-<p class="sec_d_p"  id="i10"></p>
-<p class="sec_d_p"  id="i11"></p>
-<p class="sec_d_p" id="i12"></p>
-
-
-<marquee
-behavior="alternate"
-id="marquee"
-scrollamount = "4">
-<button onclick="gotowhatsapp()"   class="button"  id="get-bill" >Click to final submit</button>
-</marquee>
-</div> 
-
-
-</div>
-
-
 
 <script>
-    //section a
-var secA_div = document.getElementById("section_A");
-var a = document.getElementById("op");
-var b = document.getElementById("on");
-var c = document.getElementById("oid");
-var c_c = document.getElementById("seven_day");
-var d = document.getElementById("name");
-var e = document.getElementById("addres_add");
+let slideIndex = 0;
+showSlides();
 
-
-
-var f = document.getElementById("address");
-var f_one = document.getElementById("secA_btn");
-        
-//section b
-var g = document.getElementById("section_B");
-var h  = document.getElementById("section_B_h");
-var i  = document.getElementById("product-name");
-var j  = document.getElementById("product-quntity");
-var k  =  document.getElementById("secB_btn");
-
-//section c
-var l  = document.getElementById("section_C");
-var m  = document.getElementById("product_nane-print");
-var n  = document.getElementById("product_prise-print");
-var o  = document.getElementById("product_quantity-print");
-var p  = document.getElementById("product_discount");
-var q  = document.getElementById("product_finalprise-print");
-var r  = document.getElementById("sec_c_heding");
-var s  = document.getElementById("transaction_id");
-var s_one = document.getElementById("select_villege");
-var s_two = document.getElementById("full_address");
-// var s_one = document.getElementById("select_villege");
-
-  
-
-
-//sec d
-var t  = document.getElementById("section_D");
-var u  = document.getElementById("secD_heding");
-var v  = document.getElementById("order_id");
-var x  = document.getElementById("all_sec_d_info");
-var z = document.getElementById("i12")
-//section c
-
-
-
-//id print perr
-function ORDER_ID_PREE() {
-      myDate = new Date
-            var hours = myDate.getHours(); 
-            hours = hours % 12; 
-            hours = hours ? hours : 12; 
-            var minutes = myDate.getMinutes(); 
-            minutes = minutes < 10 ? '0' + minutes : minutes; 
-            var myTime = "SK" + hours + minutes + "-"
-            a.innerHTML = myTime
-    } ORDER_ID_PREE()
-    
-
-
-
-//id print next
-    function ORDER_ID_NEXT(){
-    
-    // Creating the date instance
-    let d = new Date();
-    
-    // Adding one date to the present date
-    d.setDate(d.getDate() );
-    
-    let year = d.getFullYear()
-    let month = String(d.getMonth() + 1)
-    let day = String(d.getDate())
-    
-    // Adding leading 0 if the day or month
-    // is one digit value
-    month = month.length == 1 ?
-    month.padStart('2', '0') : month;
-    
-    day = day.length == 1 ?
-    day.padStart('2', '0') : day;
-    
-    // Printing the present date
-    b.innerHTML = `${day}${month}${year}`;
-    
-    
-    } ;ORDER_ID_NEXT();
-    c.innerHTML = a.innerHTML + b.innerHTML;
-
-//delivered date 
- function seven_days_after_date(){
-    
-    // Creating the date instance
-    let d = new Date();
-    
-    // Adding one date to the present date
-    d.setDate(d.getDate() + 7);
-    
-    let year = d.getFullYear()
-    let month = String(d.getMonth() + 1)
-    let day = String(d.getDate())
-    
-    // Adding leading 0 if the day or month
-    // is one digit value
-    month = month.length == 1 ?
-    month.padStart('2', '0') : month;
-    
-    day = day.length == 1 ?
-    day.padStart('2', '0') : day;
-    
-    // Printing the present date
-c_c.innerHTML = `${day}-${month}-${year}`;
-   }seven_days_after_date()
-
-
-
-
-
-
-
-
-
-
-   function secA(){
-     
-    if ( d.value == ``|| null) {
-    alert(`${"ptriy grahak"} please enter name; without this information order is not confirmed `)
-    d.style.backgroundColor = "red"
-    window.location.reload()
-    }
-    
-    else if(f.value == ``|| null)
-    {alert(`${d.value} please enter full address; without this information order is not confirmed `)
-    f.style.backgroundColor = "red"
-    window.location.reload()
-    }
-    
-    else if(
-    e.value == "select city" || ``|| null
-    ){alert(`${d.value} please select villege option; without this information order is not confirmed `)
-    document.getElementById("addres_add").style.backgroundColor = "black"
- 
-    }
-    
-    else{
-d.disabled = true;
-    e.disabled = true
-    f.disabled = true;
-    f_one.disabled = true;
-    // alert( document.getElementById("name").value +" "+"Thank you" + " your name and addres is save ; please fill product details");
-    alert(`${d.value} 
-    personal information save successfully;
-    fill product information.`)
-    };
-    secA_div.style.opacity = 0.2;
-    g.style.opacity = 1;
-    h.innerHTML = `-- ${d.value} select product options --`
-
-
-  
-
-   } 
-
-
-
-
-
-   function secB() {
-  
-
-    if(
-    i.value == "00"){alert(`${d.value} please select  product options; without this information order is not confirmed`)
-    i.style.backgroundColor = "black"
- 
-    }else{
-        i.disabled = true
-    j.disabled = true;
-    k.disabled = true;
-    g.style.opacity = 0.2;
-l.style.opacity = 1;
-alert(`${d.value} 
-    product information save successfully;
-    procced @ payment`)
-    };
-//select villege
-// var select_villege = document.querySelector('#addres_add');
-//  var option_villege_select = select_villege.value;
-//     document.getElementById("select_villege").innerHTML = option_villege_select;
-   
-//address
-// var full_address = f.innerHTML;
-// s_two.innerHTML = full_address;
-
-//alert payment page 
-setTimeout(() => {
-        alert(`${d.value}
-        कोणत्याही पेमेंट अँप ने हा कोड स्कॅन करून ${prise} RS पेमेंट करा. 
-        पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.
-        पेमेंट झाले असेल तर फक्त UPI Transaction id लिहा`)
-    }, 2000);
-
-
-// order id 
-v.innerHTML =  `Order ID :- ${c.innerHTML}`
-//select product 
-var select = i;
-    var name_product_name = select.options[select.selectedIndex].text ; //returns the entire select with all the options
-m.innerHTML = `Product name :-${name_product_name}`
-
-      // product rs
-      var  selectElement = i;
- var productrs = selectElement.value;
- n.innerHTML = `one ${name_product_name} prise :- ${productrs}`;
-
-    //product quantity
-    var selectElement = j;
-    var product_quantity = selectElement.value;
-    o.innerHTML = `product quantity :- ${product_quantity}`;
-
-
-    //total prise of selected product
-    var prise =  productrs * product_quantity;
-   q.innerHTML = ` Total ${product_quantity} product prise prise ${prise} `;
-   p.innerHTML = `productget discount* :- 20 %`
-
-//    //transaction id
-//    var transaction_id = s.innerHTML;
-
-// l.style.opacity = 1;
-r.innerHTML = `${d.value} your order summary `
-
-//befor 7 day 
-var seven_z = document.getElementById("i12")
-//PAYMENT QR
-document.getElementById("bill").innerHTML =  `${d.value} scan QR code and payment ${prise} RS`;
-
-// document.getElementById("qr").src = "https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=aniruddhamane1000-3@okicici%26am="+prise+"%26tn=" 
-
-// PAYMENTAW   https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=onkarjha2003@sbi%26am=1500%26tn=
-// document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+prise+"%26tn=" 
-// document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+prise+"%26tn=" 
-// document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+prise+"%26tn=" 
-// }
-   }
-
-   
-
-function secC(){
-    //id if elese
- if(s.value == "")
- {
-    alert(`${d.value}Please enter UPI Transaction id ;
-    without this information Order is not confirmed.`);
-    s.style.backgroundColor = "red";
-    secB()
-  }else{
-   t.style.opacity = 1;
-   l.style.opacity = 0.2;
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
   }
-  document.getElementById("i1").innerHTML = `Order ID :- ${c.innerHTML}`;
-  document.getElementById("i2").innerHTML = `name of custemer :- ${d.value}`;
-  document.getElementById("i3").innerHTML = `Villege Name :- ${e.value}`;
-  document.getElementById("i4").innerHTML = `Full Address :- ${f.value}`;
-  document.getElementById("i5").innerHTML = `${m.innerHTML}`;
-  document.getElementById("i6").innerHTML = `get discount :-  20 %`;
-  document.getElementById("i7").innerHTML = `${o.innerHTML}`;
-  document.getElementById("i8").innerHTML = `${n.innerHTML}`;
-  document.getElementById("i9").innerHTML = `${q.innerHTML}`;
-  document.getElementById("i10").innerHTML = `Order Date :- ${new Date}`;
-  //MISSING I12 ADDJEST
-  document.getElementById("i12").innerHTML = `order delivery before ${c_c.innerHTML}`;
-  document.getElementById("i11").innerHTML = `UPI transaction ID :- XXXXXXXX${s.value}`;
-document.getElementById("secD_heding").innerHTML = `- ${d.value} your order summary click to final submit-`;
-
-
-setTimeout(() => {
-    alert(`${d.value} 
-    click to final submit या बटन ला क्लिक करा ;
-    तुम्हाला व्हाट्सअप वर ऑर्डर स्मरी भेटेल आणि ऑर्डर कन्फर्म होईल`
-);
-},2000);
-
-secA_div.remove();
-g.remove();
-l.remove();
-
-
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
-
-
-
-
-
-
-function gotowhatsapp(){
-    var b1 =  document.getElementById("i1").innerHTML;
- var b2 =  document.getElementById("i2").innerHTML ;
- var b3 =   document.getElementById("i3").innerHTML ;
- var b4 =  document.getElementById("i4").innerHTML ;
- var b5 =  document.getElementById("i5").innerHTML ;
- var b6 =  document.getElementById("i6").innerHTML ;
- var b7 =  document.getElementById("i7").innerHTML ;
- var b8 =  document.getElementById("i8").innerHTML ;
- var b9 =  document.getElementById("i9").innerHTML ;
- var b10 =  document.getElementById("i10").innerHTML ;
- var b11 =  document.getElementById("i11").innerHTML ;
- var b12 =  document.getElementById("i12").innerHTML ;
-
-if (b2 === "" || b3 === ""||b4 === "") {
-    alert("please save again -Personal Details-")
-} else if(b5 === "" || b6 === ""||b7 === ""||b8 === ""||b9 === ""){
-    alert(b2+"-please save again product options -")
-}else if(b11 === "please enter again Transaction id "){
-    alert(b2+"-please enter -")
-}else{
-
-    var url = "https://wa.me/919834926132?text="
-    + "ORDER CONFIRM" + "%0a"
-    + b1 + "%0a" + "%0a"
-    +b2 + "%0a" + "%0a"
-    +b3 + "%0a" + "%0a"
-    + b4+ "%0a" + "%0a"
-    +b5 + "%0a" + "%0a"
-    + b6+ "%0a" + "%0a"
-    +b7 + "%0a" + "%0a"
-    +b8 + "%0a" + "%0a"
-    + b9+ "%0a" + "%0a"
-    + b10+ "%0a" + "%0a"
-     + b12 + "%0a" + "%0a"
-     + b11+ "%0a" + "%0a"
-     + "SEND SMS" 
-    window.open(url, '_blank').focus();
-}
- 
-   
-    }
-
-   
 </script>
 
-
-
-
-
 </body>
-</html>
+</html> 
