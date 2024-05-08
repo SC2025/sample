@@ -1,127 +1,432 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
 <style>
-* {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
+    img{
+    background-color: rgb(255, 255, 255);
+height: 29vh;
+width: 50%;
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+background-color: rgb(255, 255, 255);
+border: 1px solid black;
+
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 20%;
+    padding: 0.5%;
+    margin: 1%;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+    padding: 1%;
+}
+*{
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.table-sample{
+background-color: rgb(255, 255, 255);
+border: 3px solid black;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(8, 0, 255, 0.3) 0px 18px 36px -18px inset;    border-radius: 20%;
+    padding: 2%;
+    margin-bottom: 5%;
+}
+.product-name{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(8, 0, 255, 0.3) 0px 18px 36px -18px inset;    border-radius: 20%;
+    padding: 1%;
+    margin: 1%;
+background-color: black;
+color: beige;
+font-size: large;
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+.button-product-code{
+background-color: rgb(0, 0, 0);
+border: 2px solid;
+padding: 3px;
+margin: 3px;
+color: aliceblue;
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
 
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
 }
-
-.active {
-  background-color: #717171;
+/* div{
+box-shadow: 10px 10px 5px lightblue;
+} */
+table{
+background-color: rgb(209, 225, 225);
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(8, 0, 255, 0.3) 0px 18px 36px -18px inset;    border-radius: 20%;
+    padding: 0.5%;
+    margin: 1%;
 }
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+.table{
+/* border: 1px solid; */
+margin: 20px;
+text-align: center;
+width: 50%;
+justify-content: center;
+align-items: center;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(8, 0, 255, 0.3) 0px 18px 36px -18px inset;    border-radius: 20%;
+    padding: 0.5%;
+    margin: 1%;
 }
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+tr,th,td{
+border: 1px solid;
+padding: 4px;
+font: bold;
+font-weight: 1000;
 }
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+button{
+background-color: rgb(61, 255, 255);
+font-weight: 1000;
+padding: 4px;
+margin-top: 10px;
+}
+.name{
+background-color: rgb(190, 220, 210);
+border: 2px solid black;
+font-size: 20px;
+font-weight: 1000;
+margin: 10px;
+padding: 5px;
+align-items: center;
+justify-content: center;
+display: flex;
+}
+#MAIN_ALL_PAGE_LINK{
+    color: black;
 }
 </style>
-</head>
 <body>
 
-<h2>Automatic Slideshow</h2>
-<p>Change image every 2 seconds:</p>
+    <div class="header">
+    <div class="name"> सह्याद्री  कलेक्शन</div>
+    </div>
+    
+    
+    <a id="MAIN_ALL_PAGE_LINK" href="https://SC2025.github.io/wk-pay/"> 
+    <div class="underwere">
+    <div class="table-sample"> <img src="WK1.jpg" alt="WK1">
+    <div class="table">
+    <div class="product-name">
+        design Rumal</div>
+    <button class="button-product-code">
+        product code-WK1</button>
+    <table>
+    <tr>
+    <td>1 pieces</td>
+    <td>8 RS</td>
+    </tr>
+    </table>
+    <marquee
+    behavior="alternate"
+    id="marquee"
+    scrollamount = "4">
+    <a href="https://SC2025.github.io/wk-pay/"> <button id="link2" onclick="red()">click to order</button></a></div>
+    </marquee>
+    </div>
+    </DIV>
+    
+    
+    
+    
+    <div class="underwere"></div>
+    <div class="table-sample"> <img src="WK0.jpg" alt="WK0">
+        <div class="table">
+        <div class="product-name">
+            Checks Colour Rumal <br> 43cm x 50cm</div>
+        <button class="button-product-code">product code-WK2</button>
+        <table>
+        <tr>
+        <td>1 pieces</td>
+        <td>13 RS</td>
+        </tr>
+        </table>
+        <marquee
+        behavior="alternate"
+        id="marquee"
+        scrollamount = "4">
+        <a href="https://SC2025.github.io/wk-pay/"> <button id="link2" onclick="red()">click to order</button></a></div>
+        </marquee>
+        </div>
+    </DIV>  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="underwere"></div>
+    <div class="table-sample"> <img src="WK2.jpg" alt="WK2">
+        <div class="table">
+        <div class="product-name">
+            Checks Colour Rumal<br> 50cm x 53cm </div>
+        <button class="button-product-code">product code-WK2</button>
+        <table>
+        <tr>
+        <td>1 pieces</td>
+        <td>15 RS</td>
+        </tr>
+        </table>
+        <marquee
+        behavior="alternate"
+        id="marquee"
+        scrollamount = "4">
+        <a href="https://SC2025.github.io/wk-pay/"> <button id="link2" onclick="red()">click to order</button></a></div>
+        </marquee>
+        </div>
+    </DIV>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="underwere"></div>
+        <div class="table-sample"> <img src="WK3.jpg" alt="WK3">
+            <div class="table">
+            <div class="product-name">white Rumal</div>
+            <button class="button-product-code">product code-WK3</button>
+            <table>
+            <tr>
+            <td>1 pieces</td>
+            <td>20 RS</td>
+            </tr>
+            </table>
+            <marquee
+            behavior="alternate"
+            id="marquee"
+            scrollamount = "4">
+            <a href="https://SC2025.github.io/wk-pay/"> <button id="link2" onclick="red()">click to order</button></a></div>
+            </marquee>
+            </div>
+    </DIV>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="underwere"></div>
+            <div class="table-sample"> <img src="WK4.jpg" alt="WK4">
+                <div class="table">
+                <div class="product-name">Scarf / Stole
+              </div>
+                <button class="button-product-code">product code-WK4</button>
+                <table>
+                <tr>
+                <td>1 pieces</td>
+                <td>70 RS</td>
+                </tr>
+                </table>
+                <marquee
+                behavior="alternate"
+                id="marquee"
+                scrollamount = "4">
+                <a href="https://SC2025.github.io/wk-pay/"> <button id="link2" onclick="red()">click to order</button></a></div>
+                </marquee>
+                </div>
+    </DIV>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="underwere"></div>
+                <div class="table-sample"> <img src="WK5.jpg" alt="WK5">
+                    <div class="table">
+                    <div class="product-name">Napkins <BR> Size 35 CM * 21 CM
+                    </div>
+                    <button class="button-product-code">product code-WK5</button>
+                    <table>
+                    <tr>
+                    <td>1 pieces</td>
+                    <td>15 RS</td>
+                    </tr>
+                    </table>
+                    <marquee
+                    behavior="alternate"
+                    id="marquee"
+                    scrollamount = "4">
+                    <a href="https://SC2025.github.io/wk-pay/"> <button id="link2" onclick="red()">click to order</button></a></div>
+                    </marquee>
+                    </div>           
+    </DIV>
+    
+    
+    
+    
+    
+    <div class="underwere"></div>
+    <div class="table-sample"> <img src="WK6.jpg" alt="WK6">
+        <div class="table">
+        <div class="product-name">Napkins<BR> Size  40 CM * 25 CM
+        </div>
+        <button class="button-product-code">product code-WK6</button>
+        <table>
+        <tr>
+        <td>1 pieces</td>
+        <td>18 RS</td>
+        </tr>
+        </table>
+        <marquee
+        behavior="alternate"
+        id="marquee"
+        scrollamount = "4">
+        <a href="https://SC2025.github.io/wk-pay/"> <button id="link2" onclick="red()">click to order</button></a></div>
+        </marquee>
+        </div>
+    </div>
+    
+    
+    
+    
+        
+    
+      
+        <div class="underwere"></div>
+        <div class="table-sample"> <img id="gaun" src="" alt="WK7">
+            <div class="table">
+            <div class="product-name">4 to 5 Years <br> girls dress
+            </div>
+            <button class="button-product-code">product code-WK7</button>
+            <table>
+            <tr>
+            <td>1 pieces</td>
+            <td>79 RS</td>
+            </tr>
+            </table>
+            <marquee
+            behavior="alternate"
+            id="marquee"
+            scrollamount = "4">
+            <a href="https://SC2025.github.io/wk-pay/"> <button id="link2" onclick="red()">click to order</button></a></div>
+            </marquee>
+            </div>
+            </DIV>
 
-<div class="slideshow-container">
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="shp1.jpg" style="width:100%">
-  <div class="text">1</div>
-</div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="shp2.jpg" style="width:100%">
-  <div class="text">2</div>
-</div>
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="shp3.jpg" style="width:100%">
-  <div class="text">3</div>
-</div>
 
-</div>
-<br>
 
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
 
-<script>
-let slideIndex = 0;
-showSlides();
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
 
-</body>
-</html> 
+
+
+
+
+
+            <div class="underwere"></div>
+            <div class="table-sample"> 
+<img src="WK8.jpg" alt="">
+                <div class="table">
+                <div class="product-name">4 to 5 Years <br> girls dress
+                </div>
+                <button class="button-product-code">product code-WK8</button>
+                <table>
+                <tr>
+                <td>1 pieces</td>
+                <td>350 RS</td>
+                </tr>
+                </table>
+                <marquee
+                behavior="alternate"
+                id="marquee"
+                scrollamount = "4">
+                <a href="https://SC2025.github.io/wk-pay/"> <button id="link2" onclick="red()">click to order</button></a></div>
+                </marquee>
+                </div>
+                </DIV>
+            </a>
+        </a>
+     
+
+
+
+
+    </body>
+    <script>
+
+function ppp() {
+    setTimeout(() => {
+    document.getElementById("gaun").src = "WK1.jpg";
+}, 6000);
+setTimeout(() => {
+    document.getElementById("gaun").src = "WK1.jpg";
+}, 4000);
+setTimeout(() => {
+    document.getElementById("gaun").src = "WK1.jpg";
+},2000); 
+};ppp()
+setInterval(() => {
+    ppp()
+}, 6000);
+    </script>
+</head>
+
+</html>
+
+
+
